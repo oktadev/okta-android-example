@@ -21,13 +21,23 @@
                 android:text="Demo App"
                 style="@style/Base.TextAppearance.AppCompat.Title"/>
 
-            <ProgressBar
-                    android:id="@+id/progress_bar"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:indeterminate="true"/>
+            <LinearLayout
+                android:id="@+id/loading_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:gravity="center">
 
+                <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true"/>
+
+            </LinearLayout>
+            
             <Button
                 android:id="@+id/auth_button"
                 style="@style/Widget.AppCompat.Button.Colored"

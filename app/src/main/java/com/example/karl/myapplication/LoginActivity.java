@@ -32,12 +32,13 @@ public class LoginActivity extends Activity {
                 public void onSuccess() {
                     // Handle a successful initialization (e.g. display login button)
                     findViewById(R.id.auth_button).setVisibility(View.VISIBLE);
-                    findViewById(R.id.progress_bar).setVisibility(View.GONE);
+                    findViewById(R.id.loading_container).setVisibility(View.GONE);
                 }
 
                 @Override
                 public void onTokenFailure(@NonNull AuthorizationException ex) {
                     // Handle a failed initialization
+                    findViewById(R.id.loading_container).setVisibility(View.GONE);
                 }
             }
         );
